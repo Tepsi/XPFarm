@@ -8,12 +8,12 @@ Test cases
 	3		<->	III			In progress
 	5		<->	V			Done toRoman
 	10		<->	X			Done toRoman
-	6		<->	VI			Done
+	6		<->	VI			Done toRoman
 	8		<->	VIII
 	4		<->	IV
 	9		<->	IX
 	49		<->	XLIX
-	1666	<->	MDCLXVI
+	1666	<->	MDCLXVI		In progress
 	2008	<->	MMVIII
 	
 	
