@@ -12,6 +12,7 @@ class RomanNumeralsTest {
 	void testToRoman() {
 		assertEquals("I", RomanNumerals.toRoman(1));
 		assertEquals("II", RomanNumerals.toRoman(2));
+		assertEquals("V", RomanNumerals.toRoman(5));
 	}
 
 	@Test
