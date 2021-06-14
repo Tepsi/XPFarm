@@ -2,7 +2,12 @@ package main;
 
 public class RomanNumerals {
 	public static String toRoman(int n) {
-		return "I";
+		String retString = "";
+		for (int i = 0; i < n; i++) {
+			retString += "I";
+		}
+		return retString;
+
 	}
 
 	public static int fromRoman(String romanNumeral) {
