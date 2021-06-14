@@ -13,7 +13,7 @@ Test cases
 	4		<->	IV
 	9		<->	IX
 	49		<->	XLIX
-	1666	<->	MDCLXVI		In progress
-	2008	<->	MMVIII
+	1666	<->	MDCLXVI		Done toRoman
+	2008	<->	MMVIII		Done toRoman
 	
 	
