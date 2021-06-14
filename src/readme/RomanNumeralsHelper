@@ -10,7 +10,7 @@ Test cases
 	10		<->	X			Done toRoman
 	6		<->	VI			Done toRoman
 	8		<->	VIII
-	4		<->	IV			In progress
+	4		<->	IV			Done toRoman
 	9		<->	IX
 	49		<->	XLIX
 	1666	<->	MDCLXVI		Done toRoman

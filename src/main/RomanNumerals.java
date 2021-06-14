@@ -11,8 +11,12 @@ public class RomanNumerals {
 		for (int value = 0; value < ARABIC.length; value++) {
 			int multiplier = n / ARABIC[value];
 			if (multiplier > 0) {
-				for (int i = 0; i < multiplier; i++) {
-					retString += ROMAN[value];
+				if (multiplier == 4 && value > 0) {
+					retString += ROMAN[value] + ROMAN[value - 1];
+				} else {
+					for (int i = 0; i < multiplier; i++) {
+						retString += ROMAN[value];
+					}
 				}
 				n -= multiplier * ARABIC[value];
 			}
