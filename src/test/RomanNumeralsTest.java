@@ -18,6 +18,8 @@ class RomanNumeralsTest {
 		assertEquals("VI", RomanNumerals.toRoman(6));
 		assertEquals("MDCLXVI", RomanNumerals.toRoman(1666));
 		assertEquals("MMVIII", RomanNumerals.toRoman(2008));
+		assertEquals("IV", RomanNumerals.toRoman(4));
+		
 	}
 
 	@Test
