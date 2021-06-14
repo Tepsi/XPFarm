@@ -11,14 +11,24 @@ public class RomanNumerals {
 		for (int value = 0; value < ARABIC.length; value++) {
 			int multiplier = n / ARABIC[value];
 			if (multiplier > 0) {
-				if (multiplier == 4 && value > 0) {
-					retString += ROMAN[value] + ROMAN[value - 1];
-				} else {
-					for (int i = 0; i < multiplier; i++) {
-						retString += ROMAN[value];
-					}
+				for (int i = 0; i < multiplier; i++) {
+					retString += ROMAN[value];
 				}
 				n -= multiplier * ARABIC[value];
+			} else {
+				if (value < ARABIC.length - 1) {
+					if (value % 2 == 1) {
+						if (n == ARABIC[value] - ARABIC[value + 1]) {
+							retString += ROMAN[value + 1] + ROMAN[value];
+							n -= (ARABIC[value] - ARABIC[value + 1]);
+						}
+					} else {
+						if (n == ARABIC[value] - ARABIC[value + 2]) {
+							retString += ROMAN[value + 2] + ROMAN[value];
+							n -= (ARABIC[value] - ARABIC[value + 2]);
+						}
+					}
+				}
 			}
 		}
 
