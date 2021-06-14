@@ -6,7 +6,7 @@ Test cases
 	1		<->	I			Done toRoman
 	2		<->	II			Done toRoman
 	3		<->	III			Skipped
-	5		<->	V			In progress
+	5		<->	V			Done toRoman
 	10		<->	X
 	6		<->	VI
 	8		<->	VIII
