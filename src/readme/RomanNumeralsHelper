@@ -6,7 +6,7 @@ Test cases
 	1		<->	I			Done
 	2		<->	II			Done
 	3		<->	III			Done
-	5		<->	V			Added fromRoman failed
+	5		<->	V			Done
 	10		<->	X			Done toRoman
 	6		<->	VI			Done toRoman
 	8		<->	VIII		Done toRoman

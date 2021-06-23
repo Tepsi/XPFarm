@@ -21,6 +21,15 @@ public class RomanNumerals {
 	}
 
 	public static int fromRoman(String romanNumeral) {
-		return romanNumeral.length();
+		int retNum = 0;
+		for (int i = 0; i < romanNumeral.length(); i++) {
+			String letter = romanNumeral.substring(i, i + 1);
+			for (int j = 0; j < ROMAN.length; j++) {
+				if (ROMAN[j].equals(letter)) {
+					retNum += ARABIC[j];
+				}
+			}
+		}
+		return retNum;
 	}
 }
