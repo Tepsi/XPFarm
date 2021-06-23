@@ -15,6 +15,7 @@ Test cases
 	49		<->	XLIX		Done toRoman
 	1666	<->	MDCLXVI		Done toRoman
 	2008	<->	MMVIII		Done toRoman
+	948		<-> MCLXVIII	Done toRoman
 	
 	
 	
