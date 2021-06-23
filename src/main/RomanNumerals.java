@@ -25,25 +25,26 @@ public class RomanNumerals {
 		for (int i = 0; i < romanNumeral.length(); i++) {
 			boolean found = false;
 			if (i < romanNumeral.length() - 1) {
-				String letter = romanNumeral.substring(i, i + 2);
-				for (int j = 0; j < ROMAN.length; j++) {
-					if (ROMAN[j].equals(letter)) {
-						retNum += ARABIC[j];
-						found = true;
-						i += 1;
-					}
+				int value = searchRoman(romanNumeral.substring(i, i + 2));
+				if (value > 0) {
+					retNum += value;
+					i++;
+					found = true;
 				}
 			}
 			if (!found) {
-				String letter = romanNumeral.substring(i, i + 1);
-				for (int j = 0; j < ROMAN.length; j++) {
-					if (ROMAN[j].equals(letter)) {
-						retNum += ARABIC[j];
-					}
-				}
-
+				retNum += searchRoman(romanNumeral.substring(i, i + 1));
 			}
 		}
 		return retNum;
+	}
+
+	private static int searchRoman(String letter) {
+		for (int i = 0; i < ROMAN.length; i++) {
+			if (ROMAN[i].equals(letter)) {
+				return ARABIC[i];
+			}
+		}
+		return 0;
 	}
 }
