@@ -30,6 +30,7 @@ class RomanNumeralsTest {
 	@Test
 	void testFromRoman() {
 		assertEquals(1, RomanNumerals.fromRoman("I"));
+		assertEquals(2, RomanNumerals.fromRoman("II"));
 	}
 
 }
