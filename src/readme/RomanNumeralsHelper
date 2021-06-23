@@ -11,11 +11,11 @@ Test cases
 	6		<->	VI			Done
 	8		<->	VIII		Done
 	4		<->	IV			Done
-	9		<->	IX			Done toRoman
-	49		<->	XLIX		Done toRoman
-	1666	<->	MDCLXVI		Done toRoman
-	2008	<->	MMVIII		Done toRoman
-	948		<-> MCLXVIII	Done toRoman
+	9		<->	IX			Done
+	49		<->	XLIX		Done
+	1666	<->	MDCLXVI		Done
+	2008	<->	MMVIII		Done
+	948		<-> CMXLVIII	Done
 	
 	
 	
