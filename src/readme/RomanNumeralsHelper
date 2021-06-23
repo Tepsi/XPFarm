@@ -3,8 +3,8 @@ Roman Numerals Helper
 https://www.codewars.com/kata/51b66044bce5799a7f000003/train/java
 
 Test cases
-	1		<->	I			Done toRoman
-	2		<->	II			Added fromRoman and failed
+	1		<->	I			Done
+	2		<->	II			Done
 	3		<->	III			Done toRoman
 	5		<->	V			Done toRoman
 	10		<->	X			Done toRoman

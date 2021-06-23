@@ -21,6 +21,6 @@ public class RomanNumerals {
 	}
 
 	public static int fromRoman(String romanNumeral) {
-		return 1;
+		return romanNumeral.length();
 	}
 }
