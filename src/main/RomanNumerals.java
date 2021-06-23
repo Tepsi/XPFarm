@@ -23,11 +23,25 @@ public class RomanNumerals {
 	public static int fromRoman(String romanNumeral) {
 		int retNum = 0;
 		for (int i = 0; i < romanNumeral.length(); i++) {
-			String letter = romanNumeral.substring(i, i + 1);
-			for (int j = 0; j < ROMAN.length; j++) {
-				if (ROMAN[j].equals(letter)) {
-					retNum += ARABIC[j];
+			boolean found = false;
+			if (i < romanNumeral.length() - 1) {
+				String letter = romanNumeral.substring(i, i + 2);
+				for (int j = 0; j < ROMAN.length; j++) {
+					if (ROMAN[j].equals(letter)) {
+						retNum += ARABIC[j];
+						found = true;
+						i += 1;
+					}
 				}
+			}
+			if (!found) {
+				String letter = romanNumeral.substring(i, i + 1);
+				for (int j = 0; j < ROMAN.length; j++) {
+					if (ROMAN[j].equals(letter)) {
+						retNum += ARABIC[j];
+					}
+				}
+
 			}
 		}
 		return retNum;
