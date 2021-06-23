@@ -9,7 +9,7 @@ Test cases
 	5		<->	V			Done toRoman
 	10		<->	X			Done toRoman
 	6		<->	VI			Done toRoman
-	8		<->	VIII
+	8		<->	VIII		Done toRoman
 	4		<->	IV			Done toRoman
 	9		<->	IX			Done toRoman
 	49		<->	XLIX
