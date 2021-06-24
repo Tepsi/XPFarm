@@ -3,9 +3,9 @@ Compare Within Margin
 https://www.codewars.com/kata/56453a12fcee9a6c4700009c/train/java
 
 Test cases
-	0, 0, 0 -> 0
-	0, 1, 0 -> -1
-	1, 0, 0 -> 1
-	1, 0, 1 -> 0
-	2, 0, 1 -> 1
+	0, 0, 0 -> 0	D
+	0, 1, 0 -> -1	D
+	1, 0, 0 -> 1	D
+	1, 0, 1 -> 0	D
+	2, 0, 1 -> 1	D
 	
