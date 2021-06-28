@@ -9,6 +9,7 @@ Test Cases
 	x				->	0
 	a				->	1
 	ax				->	1
+	aa				->	2
 	aeiou			->	5
 	abracadabra		->	5
 	
