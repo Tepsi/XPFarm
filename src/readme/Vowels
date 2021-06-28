@@ -1,0 +1,15 @@
+NOTES
+Vowels
+https://www.codewars.com/kata/54ff3102c1bad923760001f3/train/java
+
+Count vowels in an String Sting (a, e, i, o, u)
+
+Test Cases
+	empty string	->	0
+	x				->	0
+	a				->	1
+	ax				->	1
+	aeiou			->	5
+	abracadabra		->	5
+	
+	 
