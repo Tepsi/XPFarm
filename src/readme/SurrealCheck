@@ -1,0 +1,21 @@
+NOTES
+SurrealCheck
+https://www.codewars.com/kata/5a24e2258f27f2bcb50000c7/train/java
+
+Given two Strings containing numbers divided by spaces find out
+if all the numbers in the second String are higher than in the first one
+
+Function
+	- Split at spaces
+	- Parse numbers
+	- find highest
+	- compare
+	
+Test cases
+isSurreal("-1", "1") = true
+isSurreal("1", "-1") = false
+isSurreal("1/2", "3/4") = true
+isSurreal("-3 -2 -1 0", "17") = true
+isSurreal("18 33 -2 19 -1/8", "99 34 200/3") = true
+isSurreal("18 33 -2 19 1/8", "99 31 200/3") = false
+isSurreal("-3", "-2 65") = true 
