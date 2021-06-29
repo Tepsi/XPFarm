@@ -10,6 +10,15 @@ Function
 	- Parse numbers
 	- find highest
 	- compare
+
+Number formats to parse
+empty String -> true
+1
+-1
+1/5
+1.7976931348623157E308
+4.9E-324
+
 	
 Test cases
 isSurreal("-1", "1") = true
