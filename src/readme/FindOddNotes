@@ -1,0 +1,16 @@
+NOTES
+FindOdd
+https://www.codewars.com/kata/54da5a58ea159efa38000836/train/java
+
+Given an array of integers return the one that appears an odd number of times
+There will always be only one integer that appears an odd number of times.
+
+Plan:
+	- Iterate through the array
+	- Count the current number appearances
+	
+Test cases
+	{1}
+	{1, 2, 2}
+	{-1, -1, 2}
+	
