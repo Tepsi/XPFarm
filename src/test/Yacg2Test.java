@@ -14,9 +14,11 @@ class Yacg2Test {
 	@Test
 	void testWinnerOfTrick() {
 		test(new String[] { "AH" }, 0);
+		test(new String[] { "2H", "AH" }, 1);
+		test(new String[] { "2H", "AS", "KC" }, 0);
 	}
 
-/*
+
 	@Test
 	public void sampleTests() {
 		test(new String[] { "AH", "2H", "3H" }, 0);
@@ -29,7 +31,7 @@ class Yacg2Test {
 		test(new String[] { "TC", "QC", "QS" }, 1);
 		test(new String[] { "3S", "3H", "4S" }, 2);
 	}
-*/
+
 	public void test(String[] cards, int winner) {
 		String usersolution = Yacg2.winnerOfTrick(cards, Arrays.copyOf(players, cards.length));
 		String text = Arrays.toString(cards) + " should be won by " + (winner + 1) + ". player: " + players[winner]
