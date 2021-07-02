@@ -1,0 +1,12 @@
+NOTES
+YaCG: #2 One Trick, One Taker.
+https://www.codewars.com/kata/5977ae37fd72c64008000081/train/java
+
+Decide who wins the trick and return the player's name
+
+Test cases
+	AH			->	0	//one card
+	2H, AH		->	1	//multiple cards, same suit
+	2H, AS, KC	->	0	//multiple cards, different suit than called
+	
+			
