@@ -1,0 +1,5 @@
+NOTES
+SquareDigit
+https://www.codewars.com/kata/546e2562b03326a88e000020/train/java
+
+Square every digit of a number and concatenate them.  The function accepts an integer and returns an integer.
