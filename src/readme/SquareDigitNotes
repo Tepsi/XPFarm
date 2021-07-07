@@ -3,3 +3,13 @@ SquareDigit
 https://www.codewars.com/kata/546e2562b03326a88e000020/train/java
 
 Square every digit of a number and concatenate them.  The function accepts an integer and returns an integer.
+
+Test cases
+0		->	0
+1		->	1
+-1		->	1
+2		->	4
+10		->	10
+23		->	49
+56		->	2536
+9119	->	811181
