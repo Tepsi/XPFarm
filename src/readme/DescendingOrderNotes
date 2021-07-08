@@ -8,6 +8,7 @@ rearrange the digits to create the highest possible number.
 
 Test cases
 0		-->		0
+5		-->		5
 11		-->		11
 12		-->		21
 315		-->		531
