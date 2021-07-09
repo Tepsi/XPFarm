@@ -9,10 +9,9 @@ import main.DRoot;
 public class DRootTest {
     @Test
     public void Test1() {
-      assertEquals( "Nope!" , 7, DRoot.digital_root(16));
+      assertEquals( "Zero should return zero" , 0, DRoot.digital_root(0));
+      assertEquals( "Any one digit number should return itself" , 1, DRoot.digital_root(1));
+      assertEquals( "Two digits should be added together" , 3, DRoot.digital_root(12));
+      assertEquals( "Should always return only one digit" , 2, DRoot.digital_root(56));
     }      
-    @Test
-    public void Test2() {
-      assertEquals( "Nope!" , 6, DRoot.digital_root(456));
-    }
 }
