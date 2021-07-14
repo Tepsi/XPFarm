@@ -1,0 +1,14 @@
+NOTES
+Find Divisor
+https://www.codewars.com/kata/542c0f198e077084c0000c2e/train/java
+
+Count the number of divisors of a positive integer
+
+Test cases
+1	->	1
+2	->	2
+3	->	2
+4	->	3
+5	->	2
+12	->	6
+30	->	8
