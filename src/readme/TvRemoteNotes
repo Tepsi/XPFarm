@@ -1,0 +1,34 @@
+NOTES
+TV remote
+My TV remote control has arrow buttons and an OK button.
+I can use these to move a "cursor" on a logical screen keyboard to type "words"...
+The screen "keyboard" layout looks like this
+a	b	c	d	e	1	2	3
+f	g	h	i	j	4	5	6
+k	l	m	n	o	7	8	9
+p	q	r	s	t	.	@	0
+u	v	w	x	y	z	_	/
+
+
+Kata task
+
+How many button presses on my remote are required to type a given word?
+Notes
+
+    The cursor always starts on the letter a (top left)
+    Remember to also press OK to "accept" each character.
+    Take a direct route from one character to the next
+    The cursor does not wrap (e.g. you cannot leave one edge and reappear on the opposite edge)
+    A "word" (for the purpose of this Kata) is any sequence of characters available on my virtual "keyboard"
+    
+
+Test cases
+a		->	1
+b		->	2
+c		->	3
+f		->	2
+ab		->	3
+af		->	3
+does	->	16
+codewars->	36
+
