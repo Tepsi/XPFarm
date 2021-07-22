@@ -8,10 +8,10 @@ number of floors (integer and always greater than 0).
 Tower block is represented as *
 
 Test cases
-1	->		"*"
-2	->		" * "
+1	->		"*"			✔
+2	->		" * "		✔
 			"***"
-3	->		"  *  "
+3	->		"  *  "		✔
 			" *** "
 			"*****"
 			
