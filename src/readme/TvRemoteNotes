@@ -33,3 +33,30 @@ af		->	3	✔
 does	->	16	🛠
 codewars->	36
 
+
+TV Remote (shift and space)
+https://www.codewars.com/kata/5b277e94b6989dd1d9000009/train/java
+Keyboard
+The screen "keyboard" layout looks like this
+
+a	b	c	d	e	1	2	3
+f	g	h	i	j	4	5	6
+k	l	m	n	o	7	8	9
+p	q	r	s	t	.	@	0
+u	v	w	x	y	z	_	/
+aA	SP						
+aA is the SHIFT key. Pressing this key toggles alpha characters between UPPERCASE and lowercase
+SP is the space character
+The other blank keys in the bottom row have no function
+Kata task
+How many button presses on my remote are required to type the given words?
+
+User Stories
+	Keyboard changes
+	Shift key
+	Optimize space and shift
+
+New test cases
+A		->	11
+a A		->	16
+a Z		->	16 (not 17)
