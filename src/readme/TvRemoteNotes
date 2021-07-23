@@ -30,8 +30,8 @@ f		->	2	✔
 /		->	11	✔
 ab		->	3	✔
 af		->	3	✔
-does	->	16	🛠
-codewars->	36
+does	->	16	✔
+codewars->	36	✔
 
 
 TV Remote (shift and space)
@@ -45,6 +45,8 @@ k	l	m	n	o	7	8	9
 p	q	r	s	t	.	@	0
 u	v	w	x	y	z	_	/
 aA	SP						
+
+
 aA is the SHIFT key. Pressing this key toggles alpha characters between UPPERCASE and lowercase
 SP is the space character
 The other blank keys in the bottom row have no function
@@ -52,11 +54,51 @@ Kata task
 How many button presses on my remote are required to type the given words?
 
 User Stories
-	Keyboard changes
-	Shift key
-	Optimize space and shift
+	Keyboard changes			✔
+		not necessary, new keyboard will work with old cases	✔
+		but needs String instead of characters because of empty keys and shift	✔
+	Shift key	✔
+	Optimize space and shift	🛠
 
 New test cases
-A		->	11
-a A		->	16
-a Z		->	16 (not 17)
+A		->	12	✔
+a A		->	16	✔
+z.		-> 	12	✔
+Z.		->	15	✔
+a Z		->	15 (not 17) ✔ 
+a 1E	-> 	21 (not 36)	✔
+F_m		->	31			✔
+%		->	-1			✔
+
+
+x
+g
+B
+v
+U
+n
+T
+m
+y
+3
+f
+3
+ 
+J
+3
+j
+b
+S
+l
+t
+7
+M
+J
+z
+L
+m
+J
+J
+F
+L
+
