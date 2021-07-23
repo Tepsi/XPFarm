@@ -15,20 +15,16 @@ public class BuildTower {
 			szint = nextLevel(szint);
 			lista.add(szint);
 		}
-		
+
 		return (String[]) lista.toArray(new String[level]);
 	}
 
 	private static String buildFirstLevel(int level) {
-		String szint = "";
-		for (int i = 1; i <= level * 2 - 1; i++) {
-			if (i == level) {
-				szint += "*";
-			} else {
-				szint += " ";
-			}
+		String oldal = "";
+		for (int i = 0; i < level - 1; i++) {
+			oldal += " ";
 		}
-		return szint;
+		return oldal + "*" + oldal;
 	}
 
 	private static String nextLevel(String szint) {
