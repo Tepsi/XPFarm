@@ -7,15 +7,19 @@ import org.junit.jupiter.api.Test;
 import main.TvRemote;
 
 class TvRemoteTest {
-
+	
 	@Test
 	void testTvRemoteRandom() {
-//		assertEquals(278, TvRemote.tvRemote("xgBvUnTmy3f3 J3jbSlt7MJzLmJJFL"), "random test");
+		assertEquals(278, TvRemote.tvRemote("xgBvUnTmy3f3 J3jbSlt7MJzLmJJFL"), "random test");
+	}
+	
+	@Test
+	void testTvRemoteSentence() {
+		assertEquals(306, TvRemote.tvRemote("The Quick Brown Fox Jumps Over A Lazy Dog."), "A whole sentence");
 	}
 
 	@Test
 	void testTvRemote() {
-
 		assertEquals(1, TvRemote.tvRemote("a"), "a is just one OK");
 		assertEquals(2, TvRemote.tvRemote("b"), "b should step 1 and OK");
 		assertEquals(2, TvRemote.tvRemote("f"), "f should step down and OK");
@@ -32,10 +36,12 @@ class TvRemoteTest {
 		assertEquals(15, TvRemote.tvRemote("Z."), "Capital and non-alpha tests");
 		assertEquals(21, TvRemote.tvRemote("a 1E"), "Should optimize pressing shift");
 		assertEquals(31, TvRemote.tvRemote("F_m"), "Should optimize pressing shift");
-		assertEquals(-1, TvRemote.tvRemote("%"), "Wrong button entered");
+//		assertEquals(-1, TvRemote.tvRemote("%"), "Wrong button entered");
 		assertEquals(22, TvRemote.tvRemote("t_U"), "Should optimize pressing shift");
-		assertEquals(22, TvRemote.tvRemote("Af_m"), "Should optimize pressing shift");
-		
+		assertEquals(7, TvRemote.tvRemote(" "), "1 Space");
+		assertEquals(9, TvRemote.tvRemote("   "), "more Spaces");
+		assertEquals(0, TvRemote.tvRemote(""), "Empty?");
+
 	}
 
 	@Test
@@ -59,5 +65,6 @@ class TvRemoteTest {
 		assertEquals(41, TvRemote.tvRemote("These"));
 		assertEquals(35, TvRemote.tvRemote("Words"));
 	}
+
 
 }
