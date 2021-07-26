@@ -1,32 +1,23 @@
 package main;
 
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 public class TicTacToe {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		Board board = new Board();
-		System.out.println("Game Board Creation...");
-		board.display();
-		System.out.println("Board created.");
-		System.out.println("The game will start with player " + board.getNextPlayer());
-		System.out.println("-----------------------------");
+		printMessages(board.display());
 		while (board.analyze() == ' ') {
-			System.out.println("Player " + board.getNextPlayer() + ":");
+			TimeUnit.SECONDS.sleep(2);
 			board.move();
-			board.display();
-			switch (board.analyze()) {
-			case 'X':
-				System.out.println("PLAYER X WON");
-				break;
-			case 'O':
-				System.out.println("PLAYER O WON");
-				break;
-			case '-':
-				System.out.println("GAME ENDS WITH A DRAW!");
-				break;
-			default: System.out.println("-----------------------------");
-				;
-			}
-			
+			printMessages(board.display());
+		}
+	}
+
+	private static void printMessages(List<String> messages) {
+		for (String message : messages) {
+			System.out.println(message);
 		}
 	}
 
