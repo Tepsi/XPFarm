@@ -1,88 +1,31 @@
 package main;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class TvRemote {
 
 	public static int tvRemote(final String word) {
 		if (word.isEmpty()) {
 			return 0;
 		}
-		List<String> route = new ArrayList<>();
-		route.add("a");
-		route.addAll(Arrays.asList(word.split("")));
-		return findRoute(route, false);
-	}
-
-	private static int findRoute(List<String> route, boolean capital) {
-		if (route.size() == 1) {
-			return 0;
-		}
-
-		int shift = needShift(route, capital);
-		if (shift == 1) {
-			List<String> shiftRoute = new ArrayList<>();
-			shiftRoute.addAll(route);
-			shiftRoute.add(1, "shift");
-			int shiftNow = getDistance(shiftRoute.get(0), shiftRoute.get(1));
-			shiftRoute.remove(0);
-			shiftNow += findRoute(shiftRoute, !capital);
-
-			int shiftLater = getDistance(route.get(0), route.get(1));
-			route.remove(0);
-			shiftLater += findRoute(route, capital);
-
-			return Math.min(shiftNow, shiftLater);
-		}
-		if (shift == 0) {
-			route.add(1, "Shift");
-			capital = !capital;
-		}
-
-		int distance = getDistance(route.get(0), route.get(1));
-		route.remove(0);
-		return distance + findRoute(route, capital);
-	}
-
-	private static int needShift(List<String> route, boolean capital) {
-		int distAlpha = findNextAlpha(route);
-		char toChar = ' ';
-		switch (distAlpha) {
-		case 0:
-			return -1;
-		case 1:
-			toChar = route.get(1).charAt(0);
-			if ((Character.isUpperCase(toChar) && !capital) || (Character.isLowerCase(toChar) && capital)) {
-				return 0;
-			} else {
-				return -1;
+		
+		String[] letters = word.split("");
+		boolean capital = false;
+		int distance = 0;
+		String prevLetter = "a";
+		for (String letter:letters) {
+			if (needShift(letter,capital)) {
+				distance += getDistance(prevLetter, "shift");
+				capital = !capital;
+				prevLetter = "shift";
 			}
-		default:
-			toChar = route.get(distAlpha).charAt(0);
-			if ((Character.isUpperCase(toChar) && !capital) || (Character.isLowerCase(toChar) && capital)) {
-				return 1;
-			} else {
-				return -1;
-			}
+			distance += getDistance(prevLetter, letter);
+			prevLetter = letter;
 		}
+		return distance;
 	}
 
-	private static int findNextAlpha(List<String> route) {
-		for (int i = 1; i < route.size(); i++) {
-			if (isAlpha(route.get(i))) {
-				return i;
-			}
-		}
-		return 0;
-	}
-
-	private static boolean isAlpha(String letter) {
-		if (Character.isAlphabetic(letter.charAt(0))) {
-			return true;
-		}
-		return false;
+	private static boolean needShift(String letter, boolean capital) {
+		char toChar = letter.charAt(0);
+		return (Character.isUpperCase(toChar) && !capital) || (Character.isLowerCase(toChar) && capital);
 	}
 
 	private static int getDistance(String from, String to) {

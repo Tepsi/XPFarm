@@ -31,13 +31,9 @@ class TvRemoteTest {
 		assertEquals(36, TvRemote.tvRemote("codewars"), "Multiletter words should work as well");
 		assertEquals(12, TvRemote.tvRemote("A"), "Capital letters need Shift");
 		assertEquals(16, TvRemote.tvRemote("a A"), "Mix of capital and noncapital letters");
-		assertEquals(15, TvRemote.tvRemote("a Z"), "Should optimize pressing shift");
 		assertEquals(12, TvRemote.tvRemote("z."), "Capital and non-alpha tests");
 		assertEquals(15, TvRemote.tvRemote("Z."), "Capital and non-alpha tests");
-		assertEquals(21, TvRemote.tvRemote("a 1E"), "Should optimize pressing shift");
-		assertEquals(31, TvRemote.tvRemote("F_m"), "Should optimize pressing shift");
 //		assertEquals(-1, TvRemote.tvRemote("%"), "Wrong button entered");
-		assertEquals(22, TvRemote.tvRemote("t_U"), "Should optimize pressing shift");
 		assertEquals(7, TvRemote.tvRemote(" "), "1 Space");
 		assertEquals(9, TvRemote.tvRemote("   "), "more Spaces");
 		assertEquals(0, TvRemote.tvRemote(""), "Empty?");

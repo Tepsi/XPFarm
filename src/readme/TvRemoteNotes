@@ -58,7 +58,6 @@ User Stories
 		not necessary, new keyboard will work with old cases	✔
 		but needs String instead of characters because of empty keys and shift	✔
 	Shift key	✔
-	Optimize space and shift	🛠
 
 New test cases
 A		->	12	✔
@@ -70,35 +69,4 @@ a 1E	-> 	21 (not 36)	✔
 F_m		->	31			✔
 %		->	-1			✔
 
-
-x
-g
-B
-v
-U
-n
-T
-m
-y
-3
-f
-3
- 
-J
-3
-j
-b
-S
-l
-t
-7
-M
-J
-z
-L
-m
-J
-J
-F
-L
 
